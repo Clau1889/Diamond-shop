@@ -1,0 +1,38 @@
+body{
+    box-sizing: border-box;
+}
+
+/* -------------- Header -------------*/
+header{
+   background-color: rgba(252, 238, 221, 0.959);
+    padding: 0.5rem;
+}
+
+/* -------------- Logo -------------*/
+.header-logo{
+    float: left;
+    text-decoration: none;
+    max-height: auto;
+}
+
+a.logo > img{
+    float: left;
+    margin-left: 10%;
+    max-height: 3rem; 
+    max-width: 5rem;
+}
+
+.logo > span{
+    color: rgb(58, 197, 221);
+    font-family: 'Lily Script One', cursive;
+    font-size: 200%;
+    text-align: left;
+    margin-left: -1rem;
+    max-width: 5rem; 
+}
+
+/* -------------- Logo -------------*/
+.header-search{
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
