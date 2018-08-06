@@ -1,3 +1,4 @@
+/*----------- GENERAL PAGE----------*/
 body {
     box-sizing: border-box;
 	margin: 0;
@@ -6,7 +7,6 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	background: #fff;
 }
-/*----------- GENERAL PAGE----------*/
 body a {
 	text-decoration: none;
 	transition: 0.5s all;
@@ -46,7 +46,33 @@ label {
 	margin: 0;
 }
 
-/*----------- HEADER----------*/
+/*--------------------*\
+        DESKTOP
+\*--------------------*/ 
+
+/*----- HEADER------*/
+.top-bar{
+    background: #222;
+    height: 4em;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
+
+.log {
+	float: right;
+	margin-top: 5px;
+}
+a.sign {
+	color: #a0a1a5;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+
+.log i {
+	color: #fff;
+	margin: 0 4px;
+}
 .header {
 	position: relative;
 }
@@ -132,12 +158,12 @@ input.form-control {
 }
 
 .header-search {
-	width: 60%;
+    width: 60%;
 }
 
 .header-search > form {
 	background: #c9c9c9;
-	border-radius: 50px;
+    border-radius: 50px;
 }
 
 .header-search input[type="search"] {
@@ -151,7 +177,7 @@ input.form-control {
 	float: left;
 	letter-spacing: 1px;
 	border-radius: 5%;
-	width: 50%;
+    width: 50%;
 }
 
 .header-search .section_room select {
@@ -183,9 +209,9 @@ input.form-control {
 	border-radius: 0px 25px 25px 0px;
 }
 
-/* -----HEROCAROUSEL---------- */
+/* -----HERO-CAROUSEL---------- */
 .carousel-inner{
-    height: 30em;
+    height: 35em;
 }
 
 .carousel-caption {
@@ -205,41 +231,149 @@ input.form-control {
 	top: 0;
 	left: 0;
 	min-width: 100%;
-    height: 30em;
+    height: 35em;
 }
 
 /*---------------- Box items ----------------- */
-.banner-bottom {
-	padding: 6em 0;
+.box-portfolio {
+	padding: 4em 0;
 	position: relative;
 }
 
 h3.tittle {
-	font-size: 3em;
-	color: #2c363e;
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    color: #2c363e;
     font-weight: 500;
+	font-size: 3em;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.37);
+    padding: 2rem;
 }
 
 .inner-items-collection{
 	margin-top: 4em;
 }
 
-ul.portfolio-area{
-    margin: 0;
-    padding: 0;
-    border:1px solid red;
-}
 
 
-@media (min-width: 1024px){
-    .inner-items-collection {
-    margin-top: 3em;
+/*--------------------*\
+        MOBILE
+\*--------------------*/ 
+@media (max-width: 320px){
+    a.sign {
+        color: #a0a1a5;
+        font-size: 0.5em;
+        letter-spacing: 1px;
+    }
+    
+    .log i {
+        color: #fff;
+        margin: 0 4px;
+    }
+    a.navbar-brand {
+        font-size: 2.5em;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    }
+    
+    /* -----HERO-CAROUSEL---------- */
+    .header-search {
+        width: 100%;
     }
 
-    li.portfolio-item > img {
-        float: left;
-        width: 50%;
+    /* -----HERO-CAROUSEL---------- */
+    .carousel-inner{
+        height: 15em;
+    }
+    .carousel-caption {
+        bottom: 3em;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 15em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 425px){
+    a.sign {
+        color: #a0a1a5;
+        font-size: 0.5em;
+        letter-spacing: 1px;
+    }
+    
+    .log i {
+        color: #fff;
+        margin: 0 4px;
+    }
+
+    a.navbar-brand {
+        font-size: 2.5em;
+        font-weight: 500;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+        margin-right: 3em;
+    }
+    /* -----HERO-CAROUSEL---------- */
+    .header-search {
+        width: 100%;
+    }
+
+    /* -----HERO-CAROUSEL---------- */
+    .carousel-inner{
+        height: 15em;
+    }
+    .carousel-caption {
+        bottom: 3em;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 15em;
+    }
+}
+
+/*--------------------*\
+        TABLET
+\*--------------------*/      
+@media (min-width: 768px){
+    a.sign {
+        color: #a0a1a5;
+        font-size: 0.7em;
+        letter-spacing: 1px;
+    }
+    
+    .log i {
+        color: #fff;
+        margin: 0 4px;
+    }
+
+    /* -----HERO-CAROUSEL---------- */
+    .carousel-inner{
+        height: 23em;
+    }
+    .carousel-caption {
+        bottom: 15em;
+        color: black;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 23em;
     }
 
 }
