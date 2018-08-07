@@ -265,6 +265,32 @@ button.cart-icon > i{
     color: rgb(118, 193, 243);
 }
 
+/*-----------------------------------------*\
+        PAGE: --> DESCRIPTION ARTICULE
+\*-----------------------------------------*/ 
+div#box-description {
+    background-color: rgba(216, 208, 208, 0.619);
+    border: 1px solid white;
+    border-radius: 1em;
+    margin: 1em 3em;
+}
+
+div#box-description > p{
+    margin-top: 1em;
+    font-size: 150%;
+ }
+
+ div#box-description-price > p.price{
+    color: rgb(5, 5, 161);
+    font-size: 150%;
+    margin: 0.5em 0;
+ }
+
+div#box-description > img{
+   height: 10em;
+   width: 80%;
+}
+
 /*--------------------*\
         MOBILE
 \*--------------------*/ 
@@ -338,8 +364,32 @@ button.cart-icon > i{
     .price-item{
         font-size: 75%;
     }
+
+    /*-----------------------------------------*\
+        PAGE: --> DESCRIPTION ARTICULE
+    \*-----------------------------------------*/ 
+    div#box-description {
+        background-color: rgba(216, 208, 208, 0.619);
+        border: 1px solid white;
+        border-radius: 1em;
+        margin: 1em;
+    }
     
-    
+    div#box-description > p{
+        font-size: 90%;
+        margin-top: 1.5em;
+    }
+
+    div#box-description-price > p.price{
+        color: rgb(5, 5, 161);
+        font-size: 90%;
+        margin: 0.5em 0;
+     }
+
+    div#box-description > img{
+       height: 6em;
+       width: 90%;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 425px){
@@ -415,6 +465,31 @@ button.cart-icon > i{
         font-size: 75%;
     }
     
+    /*-----------------------------------------*\
+        PAGE: --> DESCRIPTION ARTICULE
+    \*-----------------------------------------*/ 
+    div#box-description {
+        background-color: rgba(216, 208, 208, 0.619);
+        border: 1px solid white;
+        border-radius: 1em;
+        margin: 1em;
+    }
+    
+    div#box-description > p{
+        font-size: 90%;
+        margin-top: 1.5em;
+    }
+
+    div#box-description-price > p.price{
+        color: rgb(5, 5, 161);
+        font-size: 90%;
+        margin: 0.5em 0;
+     }
+    
+    div#box-description > img{
+       height: 6em;
+       width: 90%;
+    }
 
 }
 
@@ -459,6 +534,31 @@ button.cart-icon > i{
 
     .price-item{
         font-size: 85%;
+    }
+
+    /*-----------------------------------------*\
+        PAGE: --> DESCRIPTION ARTICULE
+    \*-----------------------------------------*/ 
+    div#box-description {
+        background-color: rgba(216, 208, 208, 0.619);
+        border: 1px solid white;
+        border-radius: 1em;
+        margin: 1em 2em;
+    }
+    
+    div#box-description > p{
+        margin-top: 1.5em;
+    }
+
+    div#box-description-price > p.price{
+        color: rgb(5, 5, 161);
+        font-size: 120%;
+        margin: 0.5em 0;
+     }
+    
+    div#box-description > img{
+       height: 10em;
+       width: 100%;
     }
 
 }
