@@ -247,14 +247,23 @@ h4.tittle {
     color: #2c363e;
     font-weight: 500;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.37);
-    padding: 2rem;
+    padding: 0.5em;
 }
 
 .inner-items-collection{
 	margin-top: 4em;
 }
 
+button.cart-icon{
+    background-color: #ffffff;
+    border: 0.5px solid rgba(220, 220, 220, 0.973);
+    border-radius: 5%;
+    float: right;
+}
 
+button.cart-icon > i{
+    color: rgb(118, 193, 243);
+}
 
 /*--------------------*\
         MOBILE

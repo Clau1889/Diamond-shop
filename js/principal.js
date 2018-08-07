@@ -53,6 +53,7 @@ jQuery(document).ready(function($){
                                     '<span class="price-item text-black font-weight-bold"> '+price+'</span>' +
                                     '<br>' +
                                     '<a class="card-title text-center right" href="" id-itemd="'+id+'">more ></a>' +
+                                    '<button class="cart-icon" type="submit"><i class="fas fa-cart-plus"></i></button>'
                                 '</div>' +
                             '</div>' +
                         '</div>'
