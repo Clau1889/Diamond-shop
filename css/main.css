@@ -215,7 +215,7 @@ input.form-control {
     height: 30em;
 }
 .carousel-caption {
-    bottom: 15em;
+    bottom: 8em;
     color: black;
     text-align: center;
     margin: 0 auto;
@@ -233,9 +233,7 @@ input.form-control {
     height: 30em;
 }
 
-
-
-/*---------------- Box items ----------------- */
+/*--------- Box items ---------- */
 .box-portfolio {
 	padding: 4em 0;
 	position: relative;
@@ -285,7 +283,7 @@ h3.tittle {
         height: 15em;
     }
     .carousel-caption {
-        bottom: 3em;
+        bottom: 10em;
         color: black;
         text-align: center;
         margin: 0 auto;
@@ -298,6 +296,24 @@ h3.tittle {
         min-width: 100%;
         height: 15em;
     }
+    /*--------- Box items ---------- */
+    .box-portfolio {
+        padding: 2em 0;
+        position: relative;
+    }
+    
+    h3.tittle {
+        color: #2c363e;
+        font-weight: 500;
+        font-size: 3em;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.37);
+        padding: 2rem;
+    }
+    
+    .inner-items-collection{
+        margin-top: 4em;
+    }
+    
 }
 
 @media (min-width: 321px) and (max-width: 425px){
@@ -327,8 +343,9 @@ h3.tittle {
     .carousel-inner{
         height: 15em;
     }
+
     .carousel-caption {
-        bottom: 3em;
+        bottom: 15em;
         color: black;
         text-align: center;
         margin: 0 auto;
@@ -341,12 +358,30 @@ h3.tittle {
         min-width: 100%;
         height: 15em;
     }
+    /*--------- Box items ---------- */
+    .box-portfolio {
+        padding: 2em 0;
+        position: relative;
+    }
+    
+    h3.tittle {
+        color: #2c363e;
+        font-weight: 500;
+        font-size: 3em;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.37);
+        padding: 2rem;
+    }
+    
+    .inner-items-collection{
+        margin-top: 4em;
+    }
+
 }
 
 /*--------------------*\
         TABLET
 \*--------------------*/      
-@media (min-width: 425px) and (max-width: 768px){
+@media (min-width: 426px) and (max-width: 768px){
     a.sign {
         color: #a0a1a5;
         font-size: 0.7em;
@@ -376,6 +411,7 @@ h3.tittle {
         min-width: 100%;
         height: 23em;
     }
+
 
 }
 
