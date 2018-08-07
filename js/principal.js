@@ -9,11 +9,9 @@ jQuery(document).ready(function($){
     /*---FUNCION AJAX PARA TODOS LOS POKEMONES---*/
     function getData() {
         $.ajax({
-            url: 'https://api.mercadolibre.com/sites/MLA/search?q=joyeria',
+            url: 'https://api.mercadolibre.com/sites/MLA/search?q=Jewelry=nacklaces=rings=bracelet',
             type: 'GET',
             datatype: 'json',
-            primary_results: 25,
-            limit: 12
         })
             .done(function (response) {
                 const getAllData = (response);
@@ -26,18 +24,45 @@ jQuery(document).ready(function($){
 
     function getDescriptionJewelry(data){
         console.log(data);
-        let arrayjewelry= [];
         let searchJewelry = data.results;
 
         for (var i = 0; i < searchJewelry.length; i++) {
             let allJewelry = searchJewelry[i];
-            console.log(allJewelry);
+            //console.log(allJewelry);
+            let id = allJewelry.id;
+            //console.log(id);
             let photo = allJewelry.thumbnail;
-            console.log(photo);
-            let title = allJewelry.title;
-            console.log(title);
-            let price= allJewelry.price;
-            console.log(price);
+            //console.log(photo);
+            let name = allJewelry.title;
+            //console.log(name);
+            let price= '$ ' + allJewelry.price.toFixed(2) + ' MX';
+            //console.log(price);
+
+        $("#template-card-item").append(createTemplate(id, photo, name, price));
         }
     }
+
+    function createTemplate (id, photo, name, price){
+        console.log(id, photo, name, price);
+
+        const template = '<div class="col-6 col-md-3 col-lg-3 card-box">' +
+                            '<div class="card">' +
+                                '<img class="card-img-top" src="'+photo+'" alt="">' +
+                                '<div class="card-body">' +
+                                    '<p class="name-item">'+name+'</p>' +
+                                    '<span class="price-item text-black font-weight-bold"> '+price+'</span>' +
+                                    '<br>' +
+                                    '<a class="card-title text-center right" href="" id-itemd="'+id+'">more ></a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>'
+
+        
+        const boxPortfolio = $('#box-portfolio');
+        boxPortfolio.append(template);
+
+        return template;
+    }
+
+
 });
