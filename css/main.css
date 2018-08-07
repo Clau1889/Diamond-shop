@@ -239,10 +239,13 @@ input.form-control {
 	position: relative;
 }
 
-h3.tittle {
+.card-box{
+    margin: 1em 0;
+}
+
+h4.tittle {
     color: #2c363e;
     font-weight: 500;
-	font-size: 3em;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.37);
     padding: 2rem;
 }
@@ -301,6 +304,10 @@ h3.tittle {
         padding: 2em 0;
         position: relative;
     }
+
+    .card-box{
+        margin: 1em 0;
+    }
     
     h3.tittle {
         color: #2c363e;
@@ -313,6 +320,16 @@ h3.tittle {
     .inner-items-collection{
         margin-top: 4em;
     }
+
+    .name-item{
+        font-weight: bold;
+        font-size: 65%;
+    }
+
+    .price-item{
+        font-size: 75%;
+    }
+    
     
 }
 
@@ -363,6 +380,10 @@ h3.tittle {
         padding: 2em 0;
         position: relative;
     }
+
+    .card-box{
+        margin: 1em 0;
+    }
     
     h3.tittle {
         color: #2c363e;
@@ -375,6 +396,16 @@ h3.tittle {
     .inner-items-collection{
         margin-top: 4em;
     }
+
+    .name-item{
+        font-weight: bold;
+        font-size: 65%;
+    }
+
+    .price-item{
+        font-size: 75%;
+    }
+    
 
 }
 
@@ -412,6 +443,14 @@ h3.tittle {
         height: 23em;
     }
 
+    .name-item{
+        font-weight: bold;
+        font-size: 75%;
+    }
+
+    .price-item{
+        font-size: 85%;
+    }
 
 }
 
