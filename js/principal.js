@@ -130,8 +130,8 @@ jQuery(document).ready(function($){
                             '<p class="col-3 col-md-3 col-lg-3 price text-center font-weight-bold">'+price+'</p>' +
                             '<img class="col-3 col-md-5 col-lg-5" src="'+photo+'" alt="thumbnail">' +
                         '</div>' +
-                        '<button class="add-cart" type="submit"><i class="fas fa-cart-plus"></i>Add to cart</button>' +
-                        '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary" data-ride="carousel">' +
+                        '<button class="col-3 col-md-2 col-lg-2 add-cart" type="submit"><i class="fas fa-cart-plus"></i>Add</button>' +
+                        '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary w-85" data-ride="carousel">' +
                             '<div class="carousel-inner">' +
                                 '<div class="carousel-item active">' +
                                     '<img class="d-block w-100" src="'+photo1+'" alt="First slide">' +
