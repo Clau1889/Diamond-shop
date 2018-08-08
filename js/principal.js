@@ -130,7 +130,8 @@ jQuery(document).ready(function($){
                             '<p class="col-3 col-md-3 col-lg-3 price text-center font-weight-bold">'+price+'</p>' +
                             '<img class="col-3 col-md-5 col-lg-5" src="'+photo+'" alt="thumbnail">' +
                         '</div>' +
-                        '<button id="back-page" class="col-3 col-md-2 col-lg-2 add-cart" type="submit"><i class="fas fa-arrow-circle-left"></i>Back</button>' +
+                        '<button id="back-page" class="col-6 col-md-3 col-lg-3 back" type="submit"><i class="fas fa-arrow-circle-left"></i>Back</button>' +
+                        '<button id="paypal-button" class="col-6 col-md-3 col-lg-3 buy btn btn-light"  type="submit"><i class="far fa-credit-card"></i>BUY IT</button>' +
                         '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary w-85" data-ride="carousel">' +
                             '<div class="carousel-inner">' +
                                 '<div class="carousel-item active">' +
@@ -151,7 +152,7 @@ jQuery(document).ready(function($){
                                 '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
                                 '<span class="sr-only">Next</span>' +
                             '</a>' +
-                        '</div>'
+                        '</div>' 
 
         return template;
     }

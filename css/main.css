@@ -297,17 +297,28 @@ div#box-images{
     width: 100%;
 }
 
-button.add-cart{
+button#back-page{
+    background-color: #ffffff;
+    border: none;
     color: #000000;
-    background-color: rgba(216, 208, 208, 0.619);
-    border: 0.5px solid rgba(182, 178, 178, 0.973);
-    border-radius: 5px;
-    margin: 1em 1.5em;
+    margin: 1em 1em;
     padding: 1em;
 }
 
-button.add-cart > i{
+button#back-page > i{
     color: #000000;
+    padding: 0 1em;
+}
+
+button#paypal-button{
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 40%;
+}
+
+button#paypal-button > i{
+    color: #000000;
+    padding-right: 1em;
 }
 
 div#box-images > img{
@@ -414,6 +425,28 @@ div#box-images > img{
        height: 6em;
        width: 90%;
     }
+
+    button#back-page{
+        background-color: #ffffff;
+        border: none;
+        color: #000000;
+        margin: 1em 0;
+        padding: 1em;
+    }
+    
+    button#back-page > i{
+        color: #000000;
+        padding: 0 1em;
+    }
+    
+    button#paypal-button{
+        margin: 1em 0;
+    }
+    
+    button#paypal-button > i{
+        color: #000000;
+        padding-right: 1em;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 425px){
@@ -514,6 +547,28 @@ div#box-images > img{
        width: 90%;
     }
 
+    button#back-page{
+        background-color: #ffffff;
+        border: none;
+        color: #000000;
+        margin: 1em 0;
+        padding: 1em;
+    }
+    
+    button#back-page > i{
+        color: #000000;
+        padding: 0 1em 0 0 ;
+    }
+    
+    button#paypal-button{
+        margin: 1em 0;
+    }
+    
+    button#paypal-button > i{
+        color: #000000;
+        padding-right: 1em;
+    }
+
 }
 
 /*--------------------*\
@@ -580,6 +635,28 @@ div#box-images > img{
        width: 80%;
     }
 
+    button#back-page{
+        background-color: #ffffff;
+        border: none;
+        color: #000000;
+        margin: 1em 0;
+        padding: 1em;
+    }
+    
+    button#back-page > i{
+        color: #000000;
+        padding: 0 1em;
+    }
+    
+    button#paypal-button{
+        margin-top: 1em;
+        margin-left: 40%;
+    }
+    
+    button#paypal-button > i{
+        color: #000000;
+        padding-right: 1em;
+    }
 }
 
 
