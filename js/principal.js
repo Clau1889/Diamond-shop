@@ -66,6 +66,7 @@ jQuery(document).ready(function($){
     /*---FUNCIÓN PARA ENLAZAR ID DEL ITEM SELECCIONADO AL DAR CLICK EN "MORE"---*/
     $(document).on('click','.see-more', function(e){
         e.preventDefault();
+        $("#template-individual-item").empty();
 
         const idItem = $(this).attr('id-item');
         // console.log(idItem);
@@ -98,19 +99,61 @@ jQuery(document).ready(function($){
         console.log(photo);
         let allPictures= dataItem.pictures;
 
-        for (var j= 0; j < allPictures.length; j++){
-            let pictures= allPictures[j];
-            console.log(pictures);
-
-            let url= pictures.url;
-            console.log(url);
+        const eachURL= [];
+        for (var j= 0; j < 3; j++){
+            eachURL.push(allPictures[j]);
         }
 
-        let price= dataItem.price;
+        let photo1= eachURL[0].url;
+        console.log(photo1);
+        let photo2= eachURL[1].url;
+        console.log(photo2);
+        let photo3= eachURL[2].url;
+        console.log(photo3);
+
+        let price= '$ ' + dataItem.price.toFixed(2) + ' MX';
         console.log(price);
         
 
-        return (name, photo, allPictures, price);
+        $("#template-individual-item").append(createTemplateArticule(name,allPictures,photo, photo1, photo2, photo3, price));
+    /*---Inicializando Carousel*/
+	$('.carousel').carousel({
+        interval: 2000
+    });	
+    }
+
+    function createTemplateArticule (name, allPictures,photo, photo1, photo2, photo3, price){
+        console.log(name, allPictures, photo, photo1, photo2, photo3, price);
+
+        const template= '<div id="box-description" class="row">' +
+                            '<p class="col-6 col-md-4 col-lg-4 text-center font-weight-bold">'+name+'</p>' +
+                            '<p class="col-3 col-md-3 col-lg-3 price text-center font-weight-bold">'+price+'</p>' +
+                            '<img class="col-3 col-md-5 col-lg-5" src="'+photo+'" alt="thumbnail">' +
+                        '</div>' +
+                        '<button class="add-cart" type="submit"><i class="fas fa-cart-plus"></i>Add to cart</button>' +
+                        '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary" data-ride="carousel">' +
+                            '<div class="carousel-inner">' +
+                                '<div class="carousel-item active">' +
+                                    '<img class="d-block w-100" src="'+photo1+'" alt="First slide">' +
+                                '</div>' +
+                                '<div class="carousel-item">' +
+                                    '<img class="d-block w-100" src="'+photo2+'" alt="Second slide">' +
+                                '</div>' +
+                                '<div class="carousel-item">' +
+                                    '<img class="d-block w-100" src="'+photo3+'" alt="Third slide">' +
+                                '</div>' +
+                            '</div>' +
+                            '<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">' +
+                                '<span class="carousel-control-prev-icon" aria-hidden="true"></span>' +
+                                '<span class="sr-only">Previous</span>' +
+                            '</a>' +
+                            '<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">' +
+                                '<span class="carousel-control-next-icon" aria-hidden="true"></span>' +
+                                '<span class="sr-only">Next</span>' +
+                            '</a>' +
+                        '</div>'
+
+        return template;
     }
 
 });
