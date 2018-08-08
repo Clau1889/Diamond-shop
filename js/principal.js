@@ -70,7 +70,7 @@ jQuery(document).ready(function($){
 
         const idItem = $(this).attr('id-item');
         // console.log(idItem);
-        getDataEachItem(idItem);
+        window.location.hash = 'jewerly/' + idItem;
     });
     
     /*---FUNCIÓN PARA OBTENER LA DATA INFORMACION DEL ARTÍCULO SEGUN EL ID---*/
@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
         
 
         $("#template-individual-item").append(createTemplateArticule(name,allPictures,photo, photo1, photo2, photo3, price));
-    /*---Inicializando Carousel*/
+    /*---Inicializando Carousel----*/
 	$('.carousel').carousel({
         interval: 2000
     });	
@@ -130,7 +130,7 @@ jQuery(document).ready(function($){
                             '<p class="col-3 col-md-3 col-lg-3 price text-center font-weight-bold">'+price+'</p>' +
                             '<img class="col-3 col-md-5 col-lg-5" src="'+photo+'" alt="thumbnail">' +
                         '</div>' +
-                        '<button class="col-3 col-md-2 col-lg-2 add-cart" type="submit"><i class="fas fa-cart-plus"></i>Add</button>' +
+                        '<button id="back-page" class="col-3 col-md-2 col-lg-2 add-cart" type="submit"><i class="fas fa-arrow-circle-left"></i>Back</button>' +
                         '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary w-85" data-ride="carousel">' +
                             '<div class="carousel-inner">' +
                                 '<div class="carousel-item active">' +
@@ -155,5 +155,70 @@ jQuery(document).ready(function($){
 
         return template;
     }
+
+    /*  ----------------------------------------------
+          FUNCIÓN PARA REALIZAR EL URL PARA CAMBIARLO
+    ------------------------------------------------- */
+
+    $(window).on('hashchange', function (){
+        /*----- DecodeURI => decodifica la URL -----*/
+        decodeURL (decodeURI(window.location.hash));
+    });
+
+    /*----- Función para desencadenar la decodificación primeramente de la URL -----*/
+    $(window).trigger('hashchange');
+
+    /*Navegar en el "navigator"*/
+    function decodeURL(url){
+        console.log('navegador');
+
+        /*----- La variable guardará en un array de cadenas la URL y la separará en cadenas individuales
+        cada que encuentre el separador "/" -----*/
+        const URLtemplate = url.split('/')[0];
+        
+        const map ={
+
+            /*Función para arrojar TODOS los artículos"*/
+            '': function(){
+                    mainItemsPage();
+            },
+
+            /*Funcion para arrojar cada artículo"*/
+            '#jewerly': function(){
+                
+                let eachId = url.split('#jewerly/')[1].trim();
+                console.log(url); 
+                console.log(url.split('#jewerly/'));
+                
+                    descriptionItemPage(eachId);
+            }
+        };
+
+        if (map[URLtemplate]){
+            map[URLtemplate]();
+        }else{
+            errorPage();
+        }
+    }
+
+    function mainItemsPage(data){
+        $(".main-all-items").show();
+        getData();
+        console.log('mainItemsPage');
+    }
+
+    function descriptionItemPage(eachId){
+        $(".main-all-items").hide();
+        getDataEachItem(eachId);
+        console.log('descriptionItemPage');
+    }
+
+    function errorPage(){
+        console.log('errorPage');
+    }
+
+    $(document).on('click', '#back-page', function(){
+        window.location.href='';
+    });
 
 });
