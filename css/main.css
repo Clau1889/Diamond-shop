@@ -315,6 +315,16 @@ div#box-images > img{
     width: 100%;
 }
 
+button.add-cart{
+    border:none;
+    background-color: white;
+    margin-left: 45%;
+}
+
+.add-cart > i{
+    padding-right: 0.5em;
+}
+
 
 /*--------------------*\
         MOBILE
@@ -428,9 +438,15 @@ div#box-images > img{
         padding: 0 1em;
     }
     
-     /*-----------------------------------------*\
-        PAGE: --> PAYMENT PAGE
-    \*------------------------------------------*/ 
+    button.add-cart{
+        border:none;
+        background-color: white;
+        margin-left: 10%;
+    }
+    
+    button.add-cart > i{
+        padding-right: 0.5em;
+    }
 }
 
 @media (min-width: 321px) and (max-width: 425px){
@@ -500,6 +516,7 @@ div#box-images > img{
     .name-item{
         font-weight: bold;
         font-size: 65%;
+        margin-left: 0;
     }
 
     .price-item{
@@ -543,8 +560,16 @@ div#box-images > img{
         color: #000000;
         padding: 0 1em 0 0 ;
     }
-    
 
+    button.add-cart{
+        border:none;
+        background-color: white;
+        margin-left: 10%;
+    }
+    
+    button.add-cart > i{
+        padding-right: 0.5em;
+    }
 }
 
 /*--------------------*\
@@ -624,7 +649,16 @@ div#box-images > img{
         padding: 0 1em;
     }
     
+    
+    button.add-cart{
+        border:none;
+        background-color: white;
+        margin-left: 50%;
+    }
 
+    button.add-cart > i{
+        padding-right: 0.5em;
+    }
 }
 
 

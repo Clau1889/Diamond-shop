@@ -134,8 +134,8 @@ jQuery(document).ready(function($){
                             '<p class="col-3 col-md-3 col-lg-3 price text-center font-weight-bold">$ ' +price+ ' MX</p>' +
                             '<img class="col-3 col-md-5 col-lg-5" src="'+photo+'" alt="thumbnail">' +
                         '</div>' +
-                        '<button id="back-page" class="col-6 col-md-3 col-lg-3 back" type="submit"><i class="fas fa-arrow-circle-left"></i>Back</button>' +
-                        '<button id="add-cart" class="col-6 col-md-3 col-lg-3 back add-cart" title="'+name+'" price="'+price+'"  type="submit"><i class="fas fa-arrow-circle-left"></i>Add</button>' +
+                        '<button id="back-page" class="col-5 col-md-3 col-lg-3 back" type="submit"><i class="fas fa-arrow-circle-left"></i>Back</button>' +
+                        '<button class="col-5 col-md-3 col-lg-3 back add-cart" title="'+name+'" price="'+price+'"  type="submit"><i class="fas fa-cart-plus"></i>Add</button>' +
                         '<div id="carouselExampleFade" class="carousel slide carousel-fade border border-secondary w-85" data-ride="carousel">' +
                             '<div class="carousel-inner">' +
                                 '<div class="carousel-item active">' +
@@ -290,8 +290,8 @@ jQuery(document).ready(function($){
     //Función para Iterar en los objetos agregados
     function cartTemplate(articuleAdded, i) {
         var template = '<div class="row">' +
-            '<div class="col-3">' + articuleAdded.price + '</div>' +
             '<div class="col-6">' + articuleAdded.name + '</div>' +
+            '<div class="col-3">' + articuleAdded.price + '</div>' +
             '<div class="col-3"> <button class="delete-from-cart" index="' + i + '">Deleted</button></div>' +
             '</div>';
 
@@ -328,26 +328,3 @@ jQuery(document).ready(function($){
             return [];
     }
 });
-
-
-// function drawCart(){
-//     $('#cartModal .cart-items').empty();
-//     var cartItems = getCartItems();
-//     var total = 0;
-//     for(var i = 0; i < cartItems.length; i++){
-//         var currentItem = cartItems[i];
-//         total += currentItem.price;
-//         $("#cartModal .cart-items").append(buildCartTemplate(currentItem, i));
-//     }
-
-//     $('.cart-total').html('$' + total + 'MXN');
-// }
-// function buildCartTemplate(cartItem, index){
-//     var template = '<div class="row cart-item">' +
-//         '<div class="col-3">' + cartItem.price +'</div>' +
-//         '<div class="col-6">' + cartItem.title + '</div>' +
-//         '<div class="col-3"> <button class="delete-from-cart" index="'+index+'">Borrar</button></div>' +
-//     '</div>';
-
-//     return template;
-//}
