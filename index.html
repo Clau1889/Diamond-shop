@@ -20,7 +20,7 @@
         <!--User Contact-->
         <div class="top-bar container-fluid">
             <div class="log">
-                <a class="sign shopping-cart" href="#" data-toggle="modal" data-target="#exampleModal">
+                <a class="sign shopping-cart" href="#" data-toggle="modal" data-target="#shopping">
                     <i class="fas fa-shopping-cart"></i>Shopping</a>
                 <a class="sign" href="#" data-toggle="modal" data-target="#exampleModal">
                     <i class="fas fa-user"></i> User Account</a>
@@ -220,66 +220,66 @@
     </section>
 
     <!-- PAGE DESCRIPTION FOR EACH PRODUCTO-->
-    <section class="shopping-bag">
-        <div id="box-list" class="container">
-            <div class="row">
-                <div class="col-6 col-md-8 col-lg-8">
-                    <h2>List</h2>
-                    <span>(Articules)</span>
-                </div>
-                <div id="box-payment" class="col-6 col-md-4 col-lg-4 border text-center">
-                    <h4 class="text-black">Total Pay: $100.00</h4>
-                    <div id="paypal-button" class=""></div>
-                    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-                    <script>
-                        paypal.Button.render({
-                            env: 'sandbox',
-                            client: {
-                                sandbox: 'demo_sandbox_client_id'
-                            },
-                            style: {
-                                size: 'responsive',
-                                color: 'black',
-                                shape: 'pill',
-                                tagline: 'true'
-                            },
-                            payment: function (data, actions) {
-                                return actions.payment.create({
-                                    transactions: [{
-                                        amount: {
-                                            total: '0.01',
-                                            currency: 'USD'
-                                        }
-                                    }]
-                                });
-                            },
-                            onAuthorize: function (data, actions) {
-                                return actions.payment.execute()
-                                    .then(function () {
-                                        window.alert('Succesful Payment');
-                                    });
-                            }
-                        }, '#paypal-button');
-                    </script>
-                </div>
-            </div>
-            <div class="template-list">
-                <div class="row item">
-                    <div class="col-10 col-md-8 col-lg-8 border">
-                        <h4 class="item-name">Name articule:
-                            <span class="name">Collar</span>
-                        </h4>
-                        <h5 class="item-price">Price:
-                            <span class="price">$550</span>
-                        </h5>
+   
+        <div id="shopping" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="deleted">
-                        <button id="deleted" class="col-2 col-md-3 col-lg-3" type="submit" i='0'>Deleted</button>
+                    <div class="modal-body">
+                        <div class="list-cart">
+                            <h4 class="item-name">Name articule:
+                                <span class="name">name</span>
+                            </h4>
+                            <h5 class="item-price">Price:
+                                <span class="price">$</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div id="box-payment" class="col-6 col-md-4 col-lg-4 border text-center">
+                            <h4 class="text-black">Total Pay: $100.00</h4>
+                            <div id="paypal-button" class=""></div>
+                            <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+                            <script>
+                                paypal.Button.render({
+                                    env: 'sandbox',
+                                    client: {
+                                        sandbox: 'demo_sandbox_client_id'
+                                    },
+                                    style: {
+                                        size: 'responsive',
+                                        color: 'black',
+                                        shape: 'pill',
+                                        tagline: 'true'
+                                    },
+                                    payment: function (data, actions) {
+                                        return actions.payment.create({
+                                            transactions: [{
+                                                amount: {
+                                                    total: '0.01',
+                                                    currency: 'USD'
+                                                }
+                                            }]
+                                        });
+                                    },
+                                    onAuthorize: function (data, actions) {
+                                        return actions.payment.execute()
+                                            .then(function () {
+                                                window.alert('Succesful Payment');
+                                            });
+                                    }
+                                }, '#paypal-button');
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

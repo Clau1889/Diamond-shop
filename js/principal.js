@@ -235,9 +235,12 @@ jQuery(document).ready(function($){
 
 
                             /*-------------------------------------
-                                    LIST-CART  PAGE
+                                        LIST-CART  MODAL
                             -------------------------------------*/
-                            
+
+    $('#shopping').on('shown.bs.modal', function () {
+    // $('#').trigger('focus')
+    });
 
     function addListCart(name, price){
 
@@ -296,6 +299,7 @@ jQuery(document).ready(function($){
         }
     }
 
-
-
+    function getItems(){
+        return JSON.parse(window.localStorage.eCommerceJewel);
+    }
 });
