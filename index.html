@@ -225,7 +225,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">List</h5>
+                        <h5 class="modal-title">YOUR LIST</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -238,11 +238,12 @@
                             <h5 class="item-price">Price:
                                 <span class="price">$</span>
                             </h5>
+                            <button id="deleted" class="col-2 col-md-3 col-lg-3" type="submit" i='0'>Deleted</button>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <div id="box-payment" class="col-6 col-md-4 col-lg-4 border text-center">
-                            <h4 class="text-black">Total Pay: $100.00</h4>
+                            <h4 class="text-black">Total Pay: <span class="cart-total"></span></h4>
                             <div id="paypal-button" class=""></div>
                             <script src="https://www.paypalobjects.com/api/checkout.js"></script>
                             <script>

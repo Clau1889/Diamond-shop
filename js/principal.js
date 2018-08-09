@@ -105,9 +105,7 @@ jQuery(document).ready(function($){
         console.log(dataItem);
 
         let name= dataItem.title;
-        console.log(name);
         let photo= dataItem.thumbnail;
-        console.log(photo);
         let allPictures= dataItem.pictures;
 
         const eachURL= [];
@@ -116,14 +114,10 @@ jQuery(document).ready(function($){
         }
 
         let photo1= eachURL[0].url;
-        console.log(photo1);
         let photo2= eachURL[1].url;
-        console.log(photo2);
         let photo3= eachURL[2].url;
-        console.log(photo3);
 
         let price= dataItem.price.toFixed(2);
-        console.log(price);
         
 
         $("#template-individual-item").append(createTemplateArticule(name,allPictures,photo, photo1, photo2, photo3, price));
@@ -134,7 +128,6 @@ jQuery(document).ready(function($){
     }
 
     function createTemplateArticule (name, allPictures,photo, photo1, photo2, photo3, price){
-        console.log(name, allPictures, photo, photo1, photo2, photo3, price);
 
         const template= '<div id="box-description" class="row">' +
                             '<p class="col-6 col-md-4 col-lg-4 text-center font-weight-bold">'+name+'</p>' +
@@ -237,9 +230,9 @@ jQuery(document).ready(function($){
                             /*-------------------------------------
                                         LIST-CART  MODAL
                             -------------------------------------*/
-
+    //INICIALIZANDO MODAL
     $('#shopping').on('shown.bs.modal', function () {
-    // $('#').trigger('focus')
+        itemsOnCarts();
     });
 
     function addListCart(name, price){
@@ -277,14 +270,43 @@ jQuery(document).ready(function($){
         addListCart(name, price);
     });
 
+    //Función para Iterar en los objetos agregados
+    function itemsOnCarts() {
+        $('#shopping .list-cart').empty();
+        let itemsAddCart = getItems();
+        var total = 0;
+        console.log(itemsAddCart);
+
+        for (var i = 0; i < itemsAddCart.length; i++) {
+            let items = itemsAddCart[i];
+            total += items.price;
+            console.log(items);
+            $("#shopping .list-cart").append(cartTemplate(items, i));
+        }
+
+        $('.cart-total').html('$' + total + 'MXN');
+    }
+
+    //Función para Iterar en los objetos agregados
+    function cartTemplate(articuleAdded, i) {
+        var template = '<div class="row">' +
+            '<div class="col-3">' + articuleAdded.price + '</div>' +
+            '<div class="col-6">' + articuleAdded.name + '</div>' +
+            '<div class="col-3"> <button class="delete-from-cart" index="' + i + '">Deleted</button></div>' +
+            '</div>';
+
+        return template;
+    }
+
     //función para hacer click al botón DELETED
-    $(document).on('click', '#deleted', function(e){
+    $(document).on('click', '.delete-from-cart', function(e){
         e.preventDefault();
 
         let index = $(this).attr('i');
         console.log(index);
 
         deletedItem(index);
+        itemsOnCarts();
     });
 
     //Función para borrar artículos del carrito
@@ -300,6 +322,32 @@ jQuery(document).ready(function($){
     }
 
     function getItems(){
-        return JSON.parse(window.localStorage.eCommerceJewel);
+        if(window.localStorage.eCommerceJewel)
+            return JSON.parse(window.localStorage.eCommerceJewel);
+        else
+            return [];
     }
 });
+
+
+// function drawCart(){
+//     $('#cartModal .cart-items').empty();
+//     var cartItems = getCartItems();
+//     var total = 0;
+//     for(var i = 0; i < cartItems.length; i++){
+//         var currentItem = cartItems[i];
+//         total += currentItem.price;
+//         $("#cartModal .cart-items").append(buildCartTemplate(currentItem, i));
+//     }
+
+//     $('.cart-total').html('$' + total + 'MXN');
+// }
+// function buildCartTemplate(cartItem, index){
+//     var template = '<div class="row cart-item">' +
+//         '<div class="col-3">' + cartItem.price +'</div>' +
+//         '<div class="col-6">' + cartItem.title + '</div>' +
+//         '<div class="col-3"> <button class="delete-from-cart" index="'+index+'">Borrar</button></div>' +
+//     '</div>';
+
+//     return template;
+//}
