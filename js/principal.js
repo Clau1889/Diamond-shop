@@ -274,7 +274,7 @@ jQuery(document).ready(function($){
     function itemsOnCarts() {
         $('#shopping .list-cart').empty();
         let itemsAddCart = getItems();
-        var total = 0;
+        let total = 0;
         console.log(itemsAddCart);
 
         for (var i = 0; i < itemsAddCart.length; i++) {
@@ -292,7 +292,7 @@ jQuery(document).ready(function($){
         var template = '<div class="row">' +
             '<div class="col-6">' + articuleAdded.name + '</div>' +
             '<div class="col-3">' + articuleAdded.price + '</div>' +
-            '<div class="col-3"> <button class="delete-from-cart" index="' + i + '">Deleted</button></div>' +
+            '<div class="col-3"> <button class="delete-from-cart" index="'+ i +'">Deleted</button></div>' +
             '</div>';
 
         return template;
