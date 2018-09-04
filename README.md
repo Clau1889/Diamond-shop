@@ -1,7 +1,7 @@
 # Jewel #
 
-**_Curso:_** _Creando una Single Page App (SPA)._
-**_Integrante:_** _Claudia Fabiola Trujillo Blanco._
+* **_Curso:_** _Creando una Single Page App (SPA)._
+* **_Integrante:_** _Claudia Fabiola Trujillo Blanco._
 * **Desarrollado para**: Laboratoria [http://laboratoria.la]
 
 
