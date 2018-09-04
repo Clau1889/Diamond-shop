@@ -1,9 +1,8 @@
 # Jewel #
 
 **_Curso:_** _Creando una Single Page App (SPA)._
-
 **_Integrante:_** _Claudia Fabiola Trujillo Blanco._
-#
+* **Desarrollado para**: Laboratoria [http://laboratoria.la]
 
 
 Se desarrolló una app web e-commerce, con la característica de una SPA (Single Page Application). 
