@@ -2,8 +2,9 @@
 
 * **_Curso:_** _Creando una Single Page App (SPA)._
 * **_Integrante:_** _Claudia Fabiola Trujillo Blanco._
-* Desarrollado para:
-    [Laboratoria] [http://laboratoria.la]
+
+## Desarrollado para
+    [Laboratoria] (http://laboratoria.la)
 
 ![image](https://user-images.githubusercontent.com/37419350/45063635-82aef880-b074-11e8-81a1-ea66e24c348d.png)
 
