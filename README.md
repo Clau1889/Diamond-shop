@@ -1,4 +1,4 @@
-# Jewel #
+# Jewel 
 
 * **_Curso:_** _Creando una Single Page App (SPA)._
 * **_Integrante:_** _Claudia Fabiola Trujillo Blanco._
